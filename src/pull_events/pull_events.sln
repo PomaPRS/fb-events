@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pull_events", "pull_events\pull_events.csproj", "{864A478B-1395-4A03-BC9C-E518974723EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events.Facebook", "Events.Facebook\Events.Facebook.csproj", "{C34AFD0D-6E83-42B8-8E7D-E45B2B2EE327}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{864A478B-1395-4A03-BC9C-E518974723EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{864A478B-1395-4A03-BC9C-E518974723EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{864A478B-1395-4A03-BC9C-E518974723EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{864A478B-1395-4A03-BC9C-E518974723EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C34AFD0D-6E83-42B8-8E7D-E45B2B2EE327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C34AFD0D-6E83-42B8-8E7D-E45B2B2EE327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C34AFD0D-6E83-42B8-8E7D-E45B2B2EE327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C34AFD0D-6E83-42B8-8E7D-E45B2B2EE327}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

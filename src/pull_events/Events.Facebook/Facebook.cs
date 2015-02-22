@@ -148,8 +148,8 @@ namespace Events.Facebook
             string state = null;
             string street = null;
             string locatedInId = null;
-            float? latitude = null;
-            float? longtitude = null;
+            double? latitude = null;
+            double? longitude = null;
 
             dynamic venue = obj.venue;
             if (venue != null)
@@ -160,9 +160,11 @@ namespace Events.Facebook
                 state = venue.state as string;
                 street = venue.street as string;
                 locatedInId = venue.located_in as string;
-                latitude = venue.latitude as float?;
-                longtitude = venue.longtitude as float?;
+                latitude = venue.latitude as double?;
+                longitude = venue.longitude as double?;
             }
+
+            string id = obj.id as string;
 
             return new FacebookEvent
             {
@@ -187,7 +189,7 @@ namespace Events.Facebook
                 Country = country,
                 City = city,
                 Latitude = latitude,
-                Longtitude = longtitude,
+                Longitude = longitude,
                 Zip = zip,
                 State = state,
                 Street = street,

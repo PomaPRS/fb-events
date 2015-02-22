@@ -29,8 +29,8 @@ namespace Events.Facebook
         // Location
         public string Country { get; set; }
         public string City { get; set; }
-        public float? Latitude { get; set; }
-        public float? Longtitude { get; set; }
+        public double? Latitude { get; set; }
+        public double? Longitude { get; set; }
         public string Zip { get; set; }
         public string State { get; set; }
         public string Street { get; set; }

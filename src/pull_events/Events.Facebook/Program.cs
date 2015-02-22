@@ -5,49 +5,46 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.IO;
 using Facebook;
 
 namespace Events.Facebook
 {
-    class ApplicationDbContext : DbContext
-    {
-        public DbSet<FacebookEvent> FacebookEvents { get; set; }
-
-        public ApplicationDbContext()
-        {
-        }
-
-        public ApplicationDbContext(string nameOrConnectionString)
-            : base(nameOrConnectionString)
-        {
-        }
-
-        public static ApplicationDbContext Create()
-        {
-            var cs = @"Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-EventProject.Web.App-20150125080753;Integrated Security=True";
-            return new ApplicationDbContext(cs);
-        }
-    }
-
     class Program
     {
-        static void Main(string[] args)
-        {
-            //try
-            //{
-                var dbContext = ApplicationDbContext.Create();
+        private static ApplicationDbContext dbContext;
 
-                var events = Facebook.SearchEvents("ижевск")
+        static IEnumerable<string> ReadCities()
+        {
+            string fileName = "cities.txt";
+            return File.ReadAllLines(fileName);
+        }
+
+        static IEnumerable<FacebookEvent> GetFacebookEvents(string query)
+        {
+            return Facebook.SearchEvents(query)
                     .Where(e => !dbContext.FacebookEvents.Any(s => s.Id == e.Id))
                     .ToList();
+        }
 
-                //dbContext.FacebookEvents.AddRange(events);
-                //dbContext.SaveChanges();
-            //}
-            //catch (Exception e)
-            //{
-            //    Console.WriteLine(e.Message);
-            //}
+        static void Main(string[] args)
+        {
+            try
+            {
+                dbContext = ApplicationDbContext.Create();
+                var cities = ReadCities();
+
+                foreach (var city in cities)
+                {
+                    var events = GetFacebookEvents(city);
+                    dbContext.FacebookEvents.AddRange(events);
+                    dbContext.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

@@ -111,6 +111,7 @@ namespace Events.Facebook
             DateTime? startTime = null;
             DateTime? updatedTime = null;
             string ownerId = null;
+            string ownerName = null;
             string parentGroupId = null;
             
             if (obj.end_time is string)
@@ -123,7 +124,10 @@ namespace Events.Facebook
                 updatedTime = DateTime.Parse((string) obj.updated_time);
 
             if (obj.owner != null)
+            {
                 ownerId = obj.owner.id as string;
+                ownerName = obj.owner.name as string;
+            }
 
             if (obj.parent_group != null)
                 parentGroupId = obj.parent_group.id as string;
@@ -147,24 +151,22 @@ namespace Events.Facebook
             string zip = null;
             string state = null;
             string street = null;
-            string locatedInId = null;
+            string venueId = null;
             double? latitude = null;
             double? longitude = null;
 
             dynamic venue = obj.venue;
             if (venue != null)
             {
+                venueId = venue.id as string;
                 country = venue.country as string;
                 city = venue.city as string;
                 zip = venue.zip as string;
                 state = venue.state as string;
                 street = venue.street as string;
-                locatedInId = venue.located_in as string;
                 latitude = venue.latitude as double?;
                 longitude = venue.longitude as double?;
             }
-
-            string id = obj.id as string;
 
             return new FacebookEvent
             {
@@ -179,6 +181,7 @@ namespace Events.Facebook
                 Location = obj.location as string,
                 Name = obj.name as string,
                 OwnerId = ownerId,
+                OwnerName = ownerName,
                 ParentGroupId = parentGroupId,
                 Privacy = obj.privacy as string,
                 StartTime = startTime,
@@ -193,7 +196,7 @@ namespace Events.Facebook
                 Zip = zip,
                 State = state,
                 Street = street,
-                LocatedInId = locatedInId
+                VenueId = venueId
             };
         }
     }

@@ -19,6 +19,7 @@ namespace Events.Facebook
         public string Location { get; set; }
         public string Name { get; set; }
         public string OwnerId { get; set; }
+        public string OwnerName { get; set; }
         public string ParentGroupId { get; set; }
         public string Privacy { get; set; }
         public DateTime? StartTime { get; set; }
@@ -34,6 +35,6 @@ namespace Events.Facebook
         public string Zip { get; set; }
         public string State { get; set; }
         public string Street { get; set; }
-        public string LocatedInId { get; set; }
+        public string VenueId { get; set; }
     }
 }

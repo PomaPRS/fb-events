@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events.Facebook", "Events.Facebook\Events.Facebook.csproj", "{C34AFD0D-6E83-42B8-8E7D-E45B2B2EE327}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventProject.Data", "..\..\..\events_web\src\Events.Web\EventProject.Data\EventProject.Data.csproj", "{1BF50157-77C7-4F8D-B89A-0407C37BCBAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventProject.Entity", "..\..\..\events_web\src\Events.Web\EventProject.Entity\EventProject.Entity.csproj", "{7AE1BA4C-666E-4CC2-A764-0675BFB298D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{C34AFD0D-6E83-42B8-8E7D-E45B2B2EE327}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C34AFD0D-6E83-42B8-8E7D-E45B2B2EE327}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C34AFD0D-6E83-42B8-8E7D-E45B2B2EE327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BF50157-77C7-4F8D-B89A-0407C37BCBAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BF50157-77C7-4F8D-B89A-0407C37BCBAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BF50157-77C7-4F8D-B89A-0407C37BCBAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BF50157-77C7-4F8D-B89A-0407C37BCBAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AE1BA4C-666E-4CC2-A764-0675BFB298D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE1BA4C-666E-4CC2-A764-0675BFB298D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE1BA4C-666E-4CC2-A764-0675BFB298D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE1BA4C-666E-4CC2-A764-0675BFB298D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

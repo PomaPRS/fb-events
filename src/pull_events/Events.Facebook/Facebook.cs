@@ -108,7 +108,7 @@ namespace Events.Facebook
                 throw new ArgumentNullException();
 
             DateTime? endTime = null;
-            DateTime? startTime = null;
+            DateTime startTime = DateTime.Now;
             DateTime? updatedTime = null;
             string ownerId = null;
             string ownerName = null;

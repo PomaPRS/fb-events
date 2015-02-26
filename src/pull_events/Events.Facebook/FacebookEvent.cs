@@ -22,7 +22,7 @@ namespace Events.Facebook
         public string OwnerName { get; set; }
         public string ParentGroupId { get; set; }
         public string Privacy { get; set; }
-        public DateTime? StartTime { get; set; }
+        public DateTime StartTime { get; set; }
         public string TicketUri { get; set; }
         public string Timezone { get; set; }
         public DateTime? UpdatedTime { get; set; }
